@@ -1,1 +1,644 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AKTE Lab — Évaluation fonctionnelle avancée après reconstruction du ligament croisé antérieur. Bilan force, mobilité, biomécanique et psychologique à Paris." />
+  <title>AKTE Lab — Évaluation fonctionnelle avancée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="header__logo" aria-label="AKTE Lab — accueil">
+        <svg class="logo-svg" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- A mark -->
+          <polygon points="0,28 10,4 20,28 16,28 10,14 4,28" fill="#111111"/>
+          <rect x="4" y="20" width="12" height="3" fill="#D4A037"/>
+          <!-- AKTE text -->
+          <text x="24" y="26" font-family="Montserrat,sans-serif" font-weight="800" font-size="18" fill="#111111">KTE</text>
+          <!-- LAB -->
+          <text x="24" y="36" font-family="Montserrat,sans-serif" font-weight="600" font-size="10" letter-spacing="4" fill="#D4A037">LAB</text>
+        </svg>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="#bilan" class="nav__link">Le bilan</a></li>
+          <li><a href="#parcours" class="nav__link">Parcours</a></li>
+          <li><a href="#rapport" class="nav__link">Rapport</a></li>
+          <li><a href="#tarifs" class="nav__link">Tarifs</a></li>
+          <li><a href="#apropos" class="nav__link">À propos</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+        </ul>
+        <!-- REPLACE #contact with your Calendly link when ready -->
+        <a href="#contact" class="btn btn--gold nav__cta">Prendre rendez-vous</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Bilan fonctionnel avancé — Genou / LCA — 6 mois post-opératoire</p>
+          <h1 class="hero__title">Reprendre le sport avec des repères objectifs</h1>
+          <p class="hero__subtitle">AKTE Lab évalue la force, la mobilité, les sauts, les asymétries, la qualité du mouvement et les facteurs psychologiques pour mieux comprendre votre niveau de préparation après une reconstruction du ligament croisé antérieur.</p>
+          <p class="hero__micro">Une évaluation inspirée du sport de haut niveau, accessible aux sportifs amateurs comme professionnels, intégrée dans un parcours de soins.</p>
+          <div class="hero__actions">
+            <!-- REPLACE #contact with your Calendly link when ready -->
+            <a href="#contact" class="btn btn--gold btn--lg">Prendre rendez-vous</a>
+            <a href="#bilan" class="btn btn--outline btn--lg">Découvrir le bilan</a>
+          </div>
+        </div>
+
+        <div class="hero__mockup" aria-hidden="true">
+          <div class="mockup-card">
+            <div class="mockup-header">
+              <span class="mockup-logo-text">AKTE<span>LAB</span></span>
+              <span class="mockup-tag">Synthèse clinique</span>
+            </div>
+            <div class="mockup-score-row">
+              <div class="mockup-score-block">
+                <div class="mockup-label">Score global</div>
+                <div class="mockup-score-value">74<span>/100</span></div>
+                <div class="mockup-bar">
+                  <div class="mockup-bar-fill" style="width:74%"></div>
+                </div>
+                <div class="mockup-status status--orange">Vigilance</div>
+              </div>
+            </div>
+            <div class="mockup-pillars">
+              <div class="mockup-pillar">
+                <div class="mockup-pillar-label">Psychologique</div>
+                <div class="mockup-pillar-right">
+                  <span class="mockup-pillar-score">72</span>
+                  <span class="dot dot--orange"></span>
+                </div>
+              </div>
+              <div class="mockup-pillar">
+                <div class="mockup-pillar-label">Articulaire</div>
+                <div class="mockup-pillar-right">
+                  <span class="mockup-pillar-score">73</span>
+                  <span class="dot dot--orange"></span>
+                </div>
+              </div>
+              <div class="mockup-pillar">
+                <div class="mockup-pillar-label">Neuromusculaire</div>
+                <div class="mockup-pillar-right">
+                  <span class="mockup-pillar-score">90</span>
+                  <span class="dot dot--green"></span>
+                </div>
+              </div>
+              <div class="mockup-pillar">
+                <div class="mockup-pillar-label">Biomécanique</div>
+                <div class="mockup-pillar-right">
+                  <span class="mockup-pillar-score">57</span>
+                  <span class="dot dot--red"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-qualities">
+              <div class="mockup-qual"><span>Concentrique</span><span class="qual-val ok">100</span></div>
+              <div class="mockup-qual"><span>Excentrique</span><span class="qual-val vigilance">66</span></div>
+              <div class="mockup-qual"><span>Absorption</span><span class="qual-val priority">64</span></div>
+              <div class="mockup-qual"><span>Pliométrie</span><span class="qual-val ok">91</span></div>
+              <div class="mockup-qual"><span>Puissance</span><span class="qual-val ok">98</span></div>
+              <div class="mockup-qual"><span>COD</span><span class="qual-val vigilance">78</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PARCOURS / INTEGRE SOINS
+    ═══════════════════════════════════════════ -->
+    <section class="section section--soft" id="parcours">
+      <div class="container">
+        <div class="section-label">Parcours de soins</div>
+        <h2 class="section-title">Un point d'étape objectif<br>à 6 mois post-opératoire</h2>
+        <div class="parcours__grid">
+          <div class="parcours__text">
+            <p>Après une reconstruction du ligament croisé antérieur, la reprise sportive ne dépend pas uniquement du temps écoulé ou de l'absence de douleur. À 6 mois, certains patients se sentent prêts, tandis que des déficits de force, de mobilité, d'absorption, de confiance ou de contrôle du mouvement peuvent encore persister.</p>
+            <p>Le bilan AKTE Lab s'intègre dans le parcours de soins pour apporter une lecture plus complète de l'état fonctionnel actuel. Il aide à objectiver la progression, à identifier les points de vigilance et à faciliter les échanges entre le patient, le kinésithérapeute, le médecin, le chirurgien ou le préparateur physique.</p>
+          </div>
+          <div class="parcours__actors">
+            <div class="actor-card"><span class="actor-icon">🏃</span><span>Patient actif</span></div>
+            <div class="actor-card"><span class="actor-icon">🩺</span><span>Kinésithérapeute</span></div>
+            <div class="actor-card"><span class="actor-icon">⚕️</span><span>Médecin du sport</span></div>
+            <div class="actor-card"><span class="actor-icon">🔬</span><span>Chirurgien</span></div>
+            <div class="actor-card"><span class="actor-icon">💪</span><span>Préparateur physique</span></div>
+            <div class="actor-card"><span class="actor-icon">🏆</span><span>Staff médical</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         BILAN — 4 SPHERES
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="bilan">
+      <div class="container">
+        <div class="section-label">Évaluation</div>
+        <h2 class="section-title">Une évaluation multidimensionnelle</h2>
+        <p class="section-intro">Le bilan ne repose pas sur un seul test. Il croise plusieurs sphères d'évaluation pour mieux comprendre comment le corps fonctionne aujourd'hui.</p>
+
+        <div class="spheres__grid">
+          <div class="sphere-card" data-index="01">
+            <div class="sphere-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <circle cx="20" cy="14" r="7" stroke="#D4A037" stroke-width="1.5"/>
+                <path d="M8 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#D4A037" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="sphere-card__num">01</div>
+            <h3 class="sphere-card__title">Sphère psychologique</h3>
+            <p class="sphere-card__text">La peur, le stress, l'appréhension, la confiance dans le genou et la perception du risque peuvent influencer la reprise sportive, la performance et la qualité du mouvement. AKTE Lab intègre ces dimensions pour mieux comprendre les freins potentiels au retour à l'activité.</p>
+            <div class="sphere-card__tags">
+              <span class="tag">Confiance</span>
+              <span class="tag">Kinésiophobie</span>
+              <span class="tag">Appréhension</span>
+            </div>
+          </div>
+
+          <div class="sphere-card" data-index="02">
+            <div class="sphere-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <ellipse cx="20" cy="20" rx="10" ry="14" stroke="#D4A037" stroke-width="1.5"/>
+                <path d="M10 20h20M14 12l12 16M26 12L14 28" stroke="#D4A037" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="sphere-card__num">02</div>
+            <h3 class="sphere-card__title">Sphère articulaire</h3>
+            <p class="sphere-card__text">L'évaluation articulaire ne se limite pas à mesurer une amplitude. Elle cherche aussi à comprendre comment l'articulation se comporte lors de tâches fonctionnelles : mobilité, restrictions, asymétries et adaptations du mouvement.</p>
+            <div class="sphere-card__tags">
+              <span class="tag">Mobilité</span>
+              <span class="tag">Asymétries</span>
+              <span class="tag">Restrictions</span>
+            </div>
+          </div>
+
+          <div class="sphere-card" data-index="03">
+            <div class="sphere-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M12 32V20a8 8 0 1 1 16 0v12" stroke="#D4A037" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 32h24" stroke="#D4A037" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M20 12v-4M16 14l-3-3M24 14l3-3" stroke="#D4A037" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="sphere-card__num">03</div>
+            <h3 class="sphere-card__title">Sphère musculaire & fonctionnelle</h3>
+            <p class="sphere-card__text">Le bilan inclut des tests de force, de saut, d'absorption, de puissance et de contrôle dynamique. Les mesures sont réalisées avec des outils orientés performance, comme des plateformes de force et des dynamomètres.</p>
+            <div class="sphere-card__tags">
+              <span class="tag">Force</span>
+              <span class="tag">Sauts</span>
+              <span class="tag">Puissance</span>
+              <span class="tag">COD</span>
+            </div>
+          </div>
+
+          <div class="sphere-card" data-index="04">
+            <div class="sphere-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <circle cx="20" cy="8" r="3" stroke="#D4A037" stroke-width="1.5"/>
+                <path d="M20 11v8M14 19l-4 8M26 19l4 8" stroke="#D4A037" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="10" cy="29" r="2.5" stroke="#D4A037" stroke-width="1.3"/>
+                <circle cx="30" cy="29" r="2.5" stroke="#D4A037" stroke-width="1.3"/>
+              </svg>
+            </div>
+            <div class="sphere-card__num">04</div>
+            <h3 class="sphere-card__title">Sphère biomécanique</h3>
+            <p class="sphere-card__text">AKTE Lab analyse la manière dont chaque segment participe au mouvement : tronc, bassin, hanche, genou, cheville et pied. L'objectif est d'identifier les stratégies de compensation, les asymétries et les zones de vigilance sur des tâches proches des exigences sportives.</p>
+            <div class="sphere-card__tags">
+              <span class="tag">Tronc</span>
+              <span class="tag">Hanche</span>
+              <span class="tag">Genou</span>
+              <span class="tag">Cheville</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         HAUT NIVEAU / ACCESSIBLE
+    ═══════════════════════════════════════════ -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-label section-label--light">Approche</div>
+        <h2 class="section-title section-title--light">Des évaluations utilisées dans la performance,<br>rendues accessibles à tous</h2>
+        <div class="approach__grid">
+          <div class="approach__block">
+            <p>Les évaluations fonctionnelles poussées sont largement utilisées dans le sport de haut niveau pour suivre la progression, guider la reprise et mieux objectiver certaines décisions.</p>
+            <p>AKTE Lab rend cette approche accessible aux sportifs amateurs comme professionnels grâce à une analyse structurée, des outils spécifiques et un algorithme développé pour croiser les données cliniques, fonctionnelles, biomécaniques et psychologiques.</p>
+            <p class="approach__note">L'objectif n'est pas de remplacer l'expertise du clinicien, mais de fournir un support clair, visuel et exploitable pour orienter la suite du travail.</p>
+          </div>
+          <div class="approach__stats">
+            <div class="stat-block">
+              <div class="stat-block__num">4</div>
+              <div class="stat-block__label">sphères d'évaluation</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block__num">1h</div>
+              <div class="stat-block__label">de bilan structuré</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block__num">6</div>
+              <div class="stat-block__label">segments analysés</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block__num">1</div>
+              <div class="stat-block__label">rapport visuel remis</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         BILANS DISPONIBLES
+    ═══════════════════════════════════════════ -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-label">Bilans</div>
+        <h2 class="section-title">Bilan genou — Reconstruction du ligament croisé antérieur</h2>
+        <p class="section-intro">Le bilan actuellement proposé concerne le suivi après reconstruction du ligament croisé antérieur.</p>
+
+        <div class="bilans__layout">
+          <div class="bilan-main-card">
+            <div class="bilan-main-card__badge">Disponible</div>
+            <h3>Bilan LCA — 6 mois</h3>
+            <p>Évaluation fonctionnelle, musculaire, articulaire, biomécanique et psychologique pour faire le point sur la progression, identifier les priorités de travail et préparer la suite du parcours de reprise.</p>
+            <ul class="bilan-includes">
+              <li>Force & asymétries</li>
+              <li>Mobilité articulaire</li>
+              <li>Tests de sauts & absorption</li>
+              <li>Analyse biomécanique</li>
+              <li>Facteurs psychologiques</li>
+            </ul>
+            <!-- REPLACE #contact with your Calendly link when ready -->
+            <a href="#contact" class="btn btn--gold">Prendre rendez-vous</a>
+          </div>
+
+          <div class="bilans__soon">
+            <p class="bilans__soon-label">Bientôt disponible</p>
+            <div class="soon-card">
+              <div class="soon-card__icon">⏱</div>
+              <h4>Bilan 3–4 mois</h4>
+              <p>Évaluation orientée reprise de course après reconstruction du ligament croisé antérieur.</p>
+            </div>
+            <div class="soon-card">
+              <div class="soon-card__icon">🏅</div>
+              <h4>Bilan 9 mois</h4>
+              <p>Évaluation orientée retour au sport et retour à la compétition après reconstruction du ligament croisé antérieur.</p>
+            </div>
+            <div class="soon-card">
+              <div class="soon-card__icon">🦵</div>
+              <h4>Cheville & Épaule</h4>
+              <p>Bilans après traumatisme ou chirurgie de cheville, et après chirurgie d'épaule notamment dans le cadre des luxations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CE QUE LE BILAN IDENTIFIE
+    ═══════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-label">Résultats</div>
+        <h2 class="section-title">Des priorités concrètes,<br>pas seulement un score</h2>
+        <p class="section-intro">Le bilan AKTE Lab permet de mettre en évidence des éléments concrets pour orienter la suite du travail.</p>
+
+        <div class="identifies__grid">
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Déficits de force</div>
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Asymétries entre les côtés</div>
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Limitations articulaires</div>
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Défauts d'absorption</div>
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Stratégies de compensation</div>
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Contrôle du mouvement</div>
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Appréhension & confiance</div>
+          <div class="identify-tag"><span class="identify-tag__dot"></span>Priorités de rééducation</div>
+        </div>
+
+        <p class="identifies__note">L'objectif est de mieux comprendre la capacité physique actuelle afin d'adapter progressivement le travail aux exigences de l'activité sportive et de la vie quotidienne.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         DEROULEMENT
+    ═══════════════════════════════════════════ -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-label">Déroulement</div>
+        <h2 class="section-title">Un bilan structuré en 4 étapes</h2>
+
+        <div class="steps__grid">
+          <div class="step-card">
+            <div class="step-card__num">01</div>
+            <h3>Échange initial</h3>
+            <p>Sport pratiqué, historique de blessure, chirurgie, côté opéré, niveau d'activité et objectifs de reprise.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">02</div>
+            <h3>Tests & mesures</h3>
+            <p>Mobilité, force, sauts, tests fonctionnels, absorption, contrôle du mouvement et questionnaires psychologiques.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">03</div>
+            <h3>Analyse croisée</h3>
+            <p>Les résultats sont analysés selon plusieurs dimensions : articulaire, musculaire, fonctionnelle, biomécanique et psychologique.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">04</div>
+            <h3>Rapport & priorités</h3>
+            <p>Un rapport visuel synthétise les résultats et met en évidence les points forts, les points de vigilance et les axes de travail prioritaires.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         RAPPORT
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="rapport">
+      <div class="container">
+        <div class="section-label">Le rapport</div>
+        <h2 class="section-title">Un rapport clair pour faciliter les décisions</h2>
+        <div class="rapport__grid">
+          <div class="rapport__text">
+            <p>À l'issue du bilan, un rapport synthétique permet de visualiser les résultats, les scores, les points forts, les points de vigilance et les priorités de travail.</p>
+            <p>Il peut faciliter les échanges entre le patient, le kinésithérapeute, le préparateur physique, le médecin ou le chirurgien.</p>
+            <p>Il permet aussi de garder une trace de l'évolution et de comparer les résultats lors d'un bilan ultérieur.</p>
+            <div class="rapport__legend">
+              <div class="legend-item"><span class="legend-dot dot--green"></span>OK — dans les normes attendues</div>
+              <div class="legend-item"><span class="legend-dot dot--orange"></span>Vigilance — point à surveiller</div>
+              <div class="legend-item"><span class="legend-dot dot--red"></span>Priorité — axe de travail prioritaire</div>
+            </div>
+          </div>
+          <div class="rapport__preview" aria-label="Aperçu du rapport AKTE Lab">
+            <div class="rp-card">
+              <div class="rp-header">
+                <span class="rp-title">SYNTHÈSE CLINIQUE</span>
+                <span class="rp-date">Rapport visuel</span>
+              </div>
+              <div class="rp-score">
+                <span class="rp-score-label">Score global</span>
+                <span class="rp-score-val">74 <small>/100</small></span>
+                <div class="rp-bar"><div class="rp-bar-fill" style="width:74%"></div></div>
+                <span class="status-badge status--orange">Vigilance modérée</span>
+              </div>
+              <div class="rp-pillars">
+                <div class="rp-pillar">
+                  <span>Psychologique</span>
+                  <div class="rp-minbar"><div style="width:72%"></div></div>
+                  <span class="rp-pillar-score">72</span>
+                  <span class="dot dot--orange"></span>
+                </div>
+                <div class="rp-pillar">
+                  <span>Articulaire</span>
+                  <div class="rp-minbar"><div style="width:73%"></div></div>
+                  <span class="rp-pillar-score">73</span>
+                  <span class="dot dot--orange"></span>
+                </div>
+                <div class="rp-pillar">
+                  <span>Neuromusculaire</span>
+                  <div class="rp-minbar"><div style="width:90%"></div></div>
+                  <span class="rp-pillar-score">90</span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <div class="rp-pillar">
+                  <span>Biomécanique</span>
+                  <div class="rp-minbar"><div style="width:57%"></div></div>
+                  <span class="rp-pillar-score">57</span>
+                  <span class="dot dot--red"></span>
+                </div>
+              </div>
+              <div class="rp-priorities">
+                <p class="rp-prio-label">Priorités de travail</p>
+                <span class="prio-tag">Absorption</span>
+                <span class="prio-tag">Freinage excentrique</span>
+                <span class="prio-tag">Contrôle frontal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         A PROPOS
+    ═══════════════════════════════════════════ -->
+    <section class="section section--soft" id="apropos">
+      <div class="container">
+        <div class="section-label">À propos</div>
+        <h2 class="section-title">Damien RAHN</h2>
+        <div class="apropos__grid">
+          <div class="apropos__initials" aria-hidden="true">DR</div>
+          <div class="apropos__text">
+            <p class="apropos__role">Kinésithérapeute du sport · Chercheur · Formateur</p>
+            <p>Damien RAHN est kinésithérapeute du sport, chercheur et formateur dans le domaine de la rééducation, de la performance et du retour au sport.</p>
+            <p>Son parcours l'amène à accompagner des sportifs amateurs et professionnels, ainsi qu'à intervenir autour de problématiques de reprise après blessure, de suivi fonctionnel et d'analyse du mouvement.</p>
+            <p>AKTE Lab est né de cette expérience de terrain, de recherche et de formation, avec l'objectif de rendre les évaluations fonctionnelles avancées plus lisibles, plus structurées et plus accessibles.</p>
+            <p class="apropos__address">
+              <svg viewBox="0 0 16 20" fill="none" width="12" aria-hidden="true"><path d="M8 0C4.686 0 2 2.686 2 6c0 4.5 6 14 6 14s6-9.5 6-14c0-3.314-2.686-6-6-6z" stroke="#D4A037" stroke-width="1.3"/><circle cx="8" cy="6" r="2" stroke="#D4A037" stroke-width="1.3"/></svg>
+              25 avenue de la porte de Châtillon, 75014 Paris
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         TARIFS
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="tarifs">
+      <div class="container">
+        <div class="section-label">Tarifs</div>
+        <h2 class="section-title">Tarif</h2>
+        <div class="tarif__wrap">
+          <div class="tarif-card">
+            <div class="tarif-card__header">
+              <h3>Bilan AKTE Lab — LCA 6 mois</h3>
+              <div class="tarif-card__meta">
+                <span class="tarif-hors-nom">Acte hors nomenclature</span>
+                <span class="tarif-duree">⏱ 1 heure</span>
+              </div>
+            </div>
+            <div class="tarif-card__price">140 <span>€</span></div>
+            <div class="tarif-card__includes">
+              <p class="includes-label">Inclus</p>
+              <ul>
+                <li>Entretien initial</li>
+                <li>Passation des tests</li>
+                <li>Mesures de force, mobilité et sauts</li>
+                <li>Analyse biomécanique</li>
+                <li>Questionnaires psychologiques</li>
+                <li>Synthèse des résultats</li>
+                <li>Rapport visuel</li>
+                <li>Priorités de travail</li>
+              </ul>
+            </div>
+            <!-- REPLACE #contact with your Calendly link when ready -->
+            <a href="#contact" class="btn btn--gold btn--block">Prendre rendez-vous</a>
+            <p class="tarif-card__note">Le bilan AKTE Lab ne remplace pas un diagnostic médical ni un avis chirurgical. Il constitue un support d'évaluation fonctionnelle et d'aide à la décision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FAQ
+    ═══════════════════════════════════════════ -->
+    <section class="section section--soft" id="faq">
+      <div class="container">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Questions fréquentes</h2>
+        <div class="faq__list">
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              À qui s'adresse le bilan AKTE Lab ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Aux sportifs amateurs ou professionnels, aux patients actifs et aux professionnels souhaitant mieux objectiver une reprise après reconstruction du ligament croisé antérieur.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Quel bilan est disponible aujourd'hui ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Le bilan actuellement disponible concerne le genou après reconstruction du ligament croisé antérieur, avec une évaluation réalisée autour de 6 mois post-opératoire.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Pourquoi faire un bilan à 6 mois ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">À 6 mois, le bilan permet de faire un point d'étape objectif sur la récupération, d'identifier les points de vigilance et d'aider à orienter la suite du parcours de soins et de reprise sportive.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Est-ce uniquement pour les sportifs professionnels ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Non. Les méthodes d'évaluation sont inspirées de la performance sportive, mais le bilan s'adresse aussi aux sportifs amateurs et aux patients actifs.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              D'autres bilans seront-ils disponibles ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Oui. Des bilans orientés reprise de course à 3–4 mois, retour au sport à 9 mois, cheville et épaule seront progressivement proposés.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Combien de temps dure le bilan ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Le bilan dure environ 1 heure.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Vais-je recevoir un rapport ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Oui. Un rapport clair et visuel est remis afin de synthétiser les résultats, les points de vigilance et les priorités de travail.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Le bilan remplace-t-il un avis médical ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Non. Le bilan ne remplace pas un diagnostic médical ni un avis chirurgical. Il complète le suivi et aide à objectiver la situation.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Pourquoi intégrer la dimension psychologique ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Parce que la peur, l'appréhension, le stress ou le manque de confiance peuvent influencer la reprise, la performance et la qualité du mouvement.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              Peut-on refaire un bilan pour suivre l'évolution ?
+              <svg class="faq-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-item__a">Oui. Refaire un bilan permet de comparer les résultats, suivre la progression et ajuster les priorités de travail.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT / CTA
+    ═══════════════════════════════════════════ -->
+    <section class="section section--cta" id="contact">
+      <div class="container">
+        <h2 class="cta__title">Vous souhaitez objectiver<br>votre reprise sportive&nbsp;?</h2>
+        <p class="cta__sub">Réservez un créneau pour réaliser un bilan AKTE Lab et obtenir une synthèse claire de votre état actuel.</p>
+        <!-- REPLACE #contact with your Calendly link when ready -->
+        <a href="#contact" class="btn btn--gold btn--lg">Prendre rendez-vous</a>
+        <div class="cta__info">
+          <p><strong>AKTE Lab</strong> · Damien RAHN</p>
+          <p>25 avenue de la porte de Châtillon, 75014 Paris</p>
+          <p><a href="mailto:contact@aktelab.fr">contact@aktelab.fr</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__name">AKTE Lab</p>
+        <p class="footer__tagline">Évaluation fonctionnelle avancée</p>
+      </div>
+      <div class="footer__info">
+        <p>Damien RAHN — Kinésithérapeute du sport</p>
+        <p>25 avenue de la porte de Châtillon, 75014 Paris</p>
+        <p><a href="mailto:contact@aktelab.fr">contact@aktelab.fr</a></p>
+      </div>
+      <div class="footer__legal">
+        <p>Prise de rendez-vous à venir</p>
+        <p><a href="#">Mentions légales</a></p>
+        <p class="footer__copy">&copy; 2025 AKTE Lab. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
