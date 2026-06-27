@@ -1485,3 +1485,40 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding: 24px;
   }
 }
+
+.rapport-highlights {
+  display: grid;
+  gap: 10px;
+  margin: 28px 0 28px;
+}
+
+.rapport-highlight {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.rapport-highlight__num {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--akte-gold);
+  flex-shrink: 0;
+}
+
+.rapport-img {
+  width: 100%;
+  max-width: 420px;
+  margin: 24px auto 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  display: block;
+}
