@@ -1446,3 +1446,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.steps-new__grid {
+  display: grid;
+  gap: 20px;
+}
+
+.step-card--new {
+  display: block;
+  padding: 28px;
+}
+
+.step-card--new .step-card__num {
+  margin-bottom: 18px;
+}
+
+.step-card--new p {
+  grid-column: auto;
+}
+
+.step-card--highlight {
+  border-color: var(--akte-gold);
+  box-shadow: 0 4px 24px rgba(212,160,55,0.12);
+}
+
+@media (min-width: 640px) {
+  .steps-new__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .steps-new__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .step-card--new {
+    padding: 24px;
+  }
+}
