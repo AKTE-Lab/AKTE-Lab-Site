@@ -424,73 +424,93 @@
 </section>
 
     <!-- ═══════════════════════════════════════════
-         RAPPORT
-    ═══════════════════════════════════════════ -->
-    <section class="section" id="rapport">
-      <div class="container">
-        <div class="section-label">Le rapport</div>
-        <h2 class="section-title">Un rapport clair pour faciliter les décisions</h2>
-        <div class="rapport__grid">
-          <div class="rapport__text">
-            <p>À l'issue du bilan, un rapport synthétique permet de visualiser les résultats, les scores, les points forts, les points de vigilance et les priorités de travail.</p>
-            <p>Il peut faciliter les échanges entre le patient, le kinésithérapeute, le préparateur physique, le médecin ou le chirurgien.</p>
-            <p>Il permet aussi de garder une trace de l'évolution et de comparer les résultats lors d'un bilan ultérieur.</p>
-            <div class="rapport__legend">
-              <div class="legend-item"><span class="legend-dot dot--green"></span>OK — dans les normes attendues</div>
-              <div class="legend-item"><span class="legend-dot dot--orange"></span>Vigilance — point à surveiller</div>
-              <div class="legend-item"><span class="legend-dot dot--red"></span>Priorité — axe de travail prioritaire</div>
-            </div>
+     RAPPORT
+═══════════════════════════════════════════ -->
+<section class="section" id="rapport">
+  <div class="container">
+    <div class="section-label">Le rapport</div>
+    <h2 class="section-title">Un rapport visuel pour comprendre rapidement les résultats</h2>
+
+    <div class="rapport__grid">
+      <div class="rapport__text">
+        <p>À l’issue du bilan, les données sont synthétisées dans un rapport clair, structuré et visuel.</p>
+        <p>Le rapport permet de visualiser les résultats, les comparaisons, les points forts, les points de vigilance et les priorités de travail.</p>
+        <p>Il peut être utilisé comme support d’échange entre le patient, le kinésithérapeute, le préparateur physique, le médecin ou le chirurgien.</p>
+        <p>Il permet aussi de garder une trace de l’évolution et de comparer les résultats lors d’un bilan ultérieur.</p>
+
+        <div class="rapport-highlights">
+          <div class="rapport-highlight">
+            <span class="rapport-highlight__num">01</span>
+            <span>Score global et synthèse par dimensions</span>
           </div>
-          <div class="rapport__preview" aria-label="Aperçu du rapport AKTE Lab">
-            <div class="rp-card">
-              <div class="rp-header">
-                <span class="rp-title">SYNTHÈSE CLINIQUE</span>
-                <span class="rp-date">Rapport visuel</span>
-              </div>
-              <div class="rp-score">
-                <span class="rp-score-label">Score global</span>
-                <span class="rp-score-val">74 <small>/100</small></span>
-                <div class="rp-bar"><div class="rp-bar-fill" style="width:74%"></div></div>
-                <span class="status-badge status--orange">Vigilance modérée</span>
-              </div>
-              <div class="rp-pillars">
-                <div class="rp-pillar">
-                  <span>Psychologique</span>
-                  <div class="rp-minbar"><div style="width:72%"></div></div>
-                  <span class="rp-pillar-score">72</span>
-                  <span class="dot dot--orange"></span>
-                </div>
-                <div class="rp-pillar">
-                  <span>Articulaire</span>
-                  <div class="rp-minbar"><div style="width:73%"></div></div>
-                  <span class="rp-pillar-score">73</span>
-                  <span class="dot dot--orange"></span>
-                </div>
-                <div class="rp-pillar">
-                  <span>Neuromusculaire</span>
-                  <div class="rp-minbar"><div style="width:90%"></div></div>
-                  <span class="rp-pillar-score">90</span>
-                  <span class="dot dot--green"></span>
-                </div>
-                <div class="rp-pillar">
-                  <span>Biomécanique</span>
-                  <div class="rp-minbar"><div style="width:57%"></div></div>
-                  <span class="rp-pillar-score">57</span>
-                  <span class="dot dot--red"></span>
-                </div>
-              </div>
-              <div class="rp-priorities">
-                <p class="rp-prio-label">Priorités de travail</p>
-                <span class="prio-tag">Absorption</span>
-                <span class="prio-tag">Freinage excentrique</span>
-                <span class="prio-tag">Contrôle frontal</span>
-              </div>
-            </div>
-            <img src="rapport-akte-lab.png" alt="Exemple de rapport AKTE Lab" class="rapport-img">
+          <div class="rapport-highlight">
+            <span class="rapport-highlight__num">02</span>
+            <span>Comparaison aux repères attendus</span>
+          </div>
+          <div class="rapport-highlight">
+            <span class="rapport-highlight__num">03</span>
+            <span>Points forts, vigilances et priorités</span>
           </div>
         </div>
+
+        <div class="rapport__legend">
+          <div class="legend-item"><span class="legend-dot dot--green"></span>OK — repère satisfaisant</div>
+          <div class="legend-item"><span class="legend-dot dot--orange"></span>Vigilance — point à surveiller</div>
+          <div class="legend-item"><span class="legend-dot dot--red"></span>Priorité — axe de travail prioritaire</div>
+        </div>
       </div>
-    </section>
+
+      <div class="rapport__preview" aria-label="Aperçu du rapport AKTE Lab">
+        <div class="rp-card">
+          <div class="rp-header">
+            <span class="rp-title">SYNTHÈSE CLINIQUE</span>
+            <span class="rp-date">Rapport visuel</span>
+          </div>
+          <div class="rp-score">
+            <span class="rp-score-label">Score global</span>
+            <span class="rp-score-val">74 <small>/100</small></span>
+            <div class="rp-bar"><div class="rp-bar-fill" style="width:74%"></div></div>
+            <span class="status-badge status--orange">Vigilance modérée</span>
+          </div>
+          <div class="rp-pillars">
+            <div class="rp-pillar">
+              <span>Psychologique</span>
+              <div class="rp-minbar"><div style="width:72%"></div></div>
+              <span class="rp-pillar-score">72</span>
+              <span class="dot dot--orange"></span>
+            </div>
+            <div class="rp-pillar">
+              <span>Articulaire</span>
+              <div class="rp-minbar"><div style="width:73%"></div></div>
+              <span class="rp-pillar-score">73</span>
+              <span class="dot dot--orange"></span>
+            </div>
+            <div class="rp-pillar">
+              <span>Neuromusculaire</span>
+              <div class="rp-minbar"><div style="width:90%"></div></div>
+              <span class="rp-pillar-score">90</span>
+              <span class="dot dot--green"></span>
+            </div>
+            <div class="rp-pillar">
+              <span>Biomécanique</span>
+              <div class="rp-minbar"><div style="width:57%"></div></div>
+              <span class="rp-pillar-score">57</span>
+              <span class="dot dot--red"></span>
+            </div>
+          </div>
+          <div class="rp-priorities">
+            <p class="rp-prio-label">Priorités de travail</p>
+            <span class="prio-tag">Absorption</span>
+            <span class="prio-tag">Freinage excentrique</span>
+            <span class="prio-tag">Contrôle frontal</span>
+          </div>
+        </div>
+
+        <img src="rapport-akte-lab.png" alt="Exemple de rapport AKTE Lab" class="rapport-img">
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ═══════════════════════════════════════════
          A PROPOS
