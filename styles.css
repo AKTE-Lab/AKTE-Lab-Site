@@ -239,7 +239,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero {
   padding-top: calc(64px + 72px);
   padding-bottom: 80px;
-  background: var(--akte-white);
+  background:
+    radial-gradient(circle at top left, rgba(212,160,55,0.08), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
   overflow: hidden;
 }
 .hero__inner {
