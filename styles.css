@@ -1581,3 +1581,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     }
   }
 }
+.mockup-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
