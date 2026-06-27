@@ -1295,3 +1295,84 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border: 1px solid var(--border-light);
   display: block;
 }
+
+
+.bilans-new__grid {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.bilan-feature-card {
+  background: var(--akte-white);
+  border: 1.5px solid var(--akte-gold);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(212,160,55,0.12);
+  position: relative;
+}
+
+.bilan-feature-card__kicker,
+.future-card__kicker {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--akte-gold-dark);
+  margin-bottom: 10px;
+}
+
+.bilan-feature-card h3,
+.future-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.bilan-feature-card p,
+.future-card p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.bilans-new__side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.soon-card--strong {
+  opacity: 1;
+}
+
+.bilans-future__grid {
+  display: grid;
+  gap: 20px;
+}
+
+.future-card {
+  background: var(--akte-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.future-card__icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 900px) {
+  .bilans-new__grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: stretch;
+  }
+
+  .bilans-future__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
