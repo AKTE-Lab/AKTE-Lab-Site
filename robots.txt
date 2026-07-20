@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.aktelab.fr/sitemap.xml
+Sitemap: https://aktelab.fr/sitemap.xml
