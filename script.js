@@ -95,3 +95,147 @@
   });
 
 })();
+
+/* ═══════════════════════════════════════════════════════════
+   AKTE LAB — Consentement Analytics et suivi Calendly
+═══════════════════════════════════════════════════════════ */
+
+(function () {
+  'use strict';
+
+  const GA_MEASUREMENT_ID = 'G-BEEHK8QX56';
+  const CONSENT_STORAGE_KEY = 'akte_analytics_consent';
+
+  let analyticsLoaded = false;
+
+  function initializeDataLayer() {
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+  }
+
+  function loadGoogleAnalytics() {
+    if (analyticsLoaded) {
+      return;
+    }
+
+    initializeDataLayer();
+
+    /*
+     * Consentement refusé par défaut, puis accordé immédiatement
+     * puisque cette fonction n'est appelée qu'après acceptation.
+     */
+    window.gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    window.gtag('consent', 'update', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    const googleScript = document.createElement('script');
+    googleScript.async = true;
+    googleScript.src =
+      'https://www.googletagmanager.com/gtag/js?id=' +
+      encodeURIComponent(GA_MEASUREMENT_ID);
+    googleScript.dataset.akteAnalytics = 'true';
+
+    document.head.appendChild(googleScript);
+
+    window.gtag('js', new Date());
+
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      send_page_view: true
+    });
+
+    analyticsLoaded = true;
+  }
+
+  function showConsentBanner() {
+    const banner = document.getElementById('cookieBanner');
+
+    if (banner) {
+      banner.classList.add('is-visible');
+    }
+  }
+
+  function hideConsentBanner() {
+    const banner = document.getElementById('cookieBanner');
+
+    if (banner) {
+      banner.classList.remove('is-visible');
+    }
+  }
+
+  function acceptAnalytics() {
+    localStorage.setItem(CONSENT_STORAGE_KEY, 'accepted');
+    loadGoogleAnalytics();
+    hideConsentBanner();
+  }
+
+  function refuseAnalytics() {
+    localStorage.setItem(CONSENT_STORAGE_KEY, 'refused');
+    hideConsentBanner();
+  }
+
+  function resetAnalyticsChoice() {
+    localStorage.removeItem(CONSENT_STORAGE_KEY);
+    showConsentBanner();
+  }
+
+  function trackCalendlyClick(link) {
+    if (!analyticsLoaded || typeof window.gtag !== 'function') {
+      return;
+    }
+
+    window.gtag('event', 'calendly_click', {
+      event_category: 'engagement',
+      event_label: link.textContent.trim(),
+      link_url: link.href,
+      transport_type: 'beacon'
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const savedConsent = localStorage.getItem(CONSENT_STORAGE_KEY);
+    const acceptButton = document.getElementById('acceptCookies');
+    const refuseButton = document.getElementById('refuseCookies');
+    const manageButton = document.getElementById('manageCookies');
+
+    if (savedConsent === 'accepted') {
+      loadGoogleAnalytics();
+    } else if (savedConsent !== 'refused') {
+      showConsentBanner();
+    }
+
+    if (acceptButton) {
+      acceptButton.addEventListener('click', acceptAnalytics);
+    }
+
+    if (refuseButton) {
+      refuseButton.addEventListener('click', refuseAnalytics);
+    }
+
+    if (manageButton) {
+      manageButton.addEventListener('click', resetAnalyticsChoice);
+    }
+
+    document.addEventListener('click', function (event) {
+      const calendlyLink = event.target.closest(
+        'a[href*="calendly.com/contact-aktelab"]'
+      );
+
+      if (calendlyLink) {
+        trackCalendlyClick(calendlyLink);
+      }
+    });
+  });
+})();
