@@ -2,16 +2,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEEHK8QX56"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-BEEHK8QX56');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -771,13 +761,67 @@
         <p><a href="mailto:contact@aktelab.fr">contact@aktelab.fr</a></p>
       </div>
       <div class="footer__legal">
-        <p><a href="https://calendly.com/contact-aktelab/evaluation-fonctionnelle-rlca-6-mois" target="_blank" rel="noopener">Prendre rendez-vous</a></p>
+        <p>
+          <a
+            href="https://calendly.com/contact-aktelab/evaluation-fonctionnelle-rlca-6-mois"
+            target="_blank"
+            rel="noopener"
+          >
+            Prendre rendez-vous
+          </a>
+        </p>
+
+        <p>
+          <button type="button" class="footer-cookie-link" id="manageCookies">
+            Gérer mes préférences de cookies
+          </button>
+        </p>
+
         <p><a href="#">Mentions légales</a></p>
-        <p class="footer__copy">&copy; 2025 AKTE Lab. Tous droits réservés.</p>
-      </div>
+        <p class="footer__copy">&copy; 2026 AKTE Lab. Tous droits réservés.</p>
     </div>
   </footer>
+  <div
+    class="cookie-banner"
+    id="cookieBanner"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cookieTitle"
+    aria-describedby="cookieDescription"
+  >
+    <div class="cookie-banner__content">
+      <div class="cookie-banner__text">
+        <strong id="cookieTitle">Mesure d’audience</strong>
 
+        <p id="cookieDescription">
+          AKTE Lab utilise Google Analytics pour mesurer la fréquentation du site
+          et améliorer son contenu. Vous pouvez accepter ou refuser cette mesure.
+        </p>
+
+        <a href="politique-confidentialite.html">
+          En savoir plus
+        </a>
+      </div>
+
+      <div class="cookie-banner__actions">
+        <button
+          type="button"
+          class="cookie-btn cookie-btn--refuse"
+          id="refuseCookies"
+        >
+          Refuser
+        </button>
+
+        <button
+          type="button"
+          class="cookie-btn cookie-btn--accept"
+          id="acceptCookies"
+        >
+          Accepter
+        </button>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
