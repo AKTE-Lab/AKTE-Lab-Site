@@ -1588,3 +1588,133 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: auto;
   display: block;
 }
+
+
+/* ──────────── BANDEAU DE CONSENTEMENT ──────────── */
+
+.cookie-banner {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: none;
+}
+
+.cookie-banner.is-visible {
+  display: block;
+}
+
+.cookie-banner__content {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 22px;
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid rgba(212, 160, 55, 0.55);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cookie-banner__text {
+  max-width: 650px;
+}
+
+.cookie-banner__text strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.cookie-banner__text p {
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.cookie-banner__text a {
+  color: var(--akte-gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  min-height: 44px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cookie-btn--refuse {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.cookie-btn--accept {
+  color: #111111;
+  background: var(--akte-gold);
+  border: 1px solid var(--akte-gold);
+}
+
+.cookie-btn:focus-visible,
+.footer-cookie-link:focus-visible {
+  outline: 3px solid var(--akte-gold);
+  outline-offset: 3px;
+}
+
+.footer-cookie-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer-cookie-link:hover {
+  color: var(--akte-gold);
+}
+
+@media (max-width: 700px) {
+  .cookie-banner {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .cookie-banner__content {
+    padding: 18px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-banner__actions {
+    width: 100%;
+  }
+
+  .cookie-btn {
+    flex: 1;
+  }
+}
